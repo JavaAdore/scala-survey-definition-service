@@ -1,0 +1,11 @@
+# --- !Ups
+CREATE SEQUENCE ACTION_PK_SEQ START WITH 1;
+CREATE TABLE ACTIONS
+(
+       ID INT8 NOT NULL,
+       ACTION_TYPE VARCHAR(40),
+       ACTION_DATE TIMESTAMP WITH TIME ZONE,
+       PRIMARY KEY (ID)
+);
+
+alter table ACTIONS alter column id set default nextval('ACTION_PK_SEQ');
